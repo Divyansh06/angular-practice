@@ -1,0 +1,39 @@
+<h3>Create Product</h3>
+<form>
+  <div class="form-group">
+    <label for="productname">Product Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="productname"
+      placeholder="Product Name"
+      [value]="name"
+      (input)="handleNameChange($event)"
+    />
+  </div>
+  <div class="form-group">
+    <label for="productdescription">Product Description</label>
+    <textarea
+      class="form-control"
+      id="productdescription"
+      rows="3"
+      placeholder="Product Description"
+      [value]="description"
+      (input)="handleDesChange($event)"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="productimage">Image</label>
+    <input
+      type="text"
+      class="form-control"
+      id="productimage"
+      placeholder="Product Image Url"
+      [value]="image"
+      (input)="handleImageChange($event)"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="handleSubmit()">
+    Create
+  </button>
+</form>

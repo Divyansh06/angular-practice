@@ -1,0 +1,7 @@
+<h3>Products Dashboard</h3>
+<div class="grid-container">
+  <app-product
+    *ngFor="let product of productlist; index as i"
+    [product]="product"
+  ></app-product>
+</div>

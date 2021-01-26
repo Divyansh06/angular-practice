@@ -3,5 +3,6 @@
   <app-product
     *ngFor="let product of productlist; index as i"
     [product]="product"
+    (delete)="onDelete(i)"
   ></app-product>
 </div>

@@ -1,9 +1,16 @@
 <div class="container">
   <div class="seperate">
-    <app-product-form></app-product-form>
+    <app-product-form
+      (onProductCreate)="productCreated($event)"
+    ></app-product-form>
   </div>
   <hr />
+  <app-alerts [alertlist]="alertlist"></app-alerts>
+  <hr />
   <div class="seperate">
-    <app-product-dashboard></app-product-dashboard>
+    <app-product-dashboard
+      [productlist]="productlist"
+      (delete)="onDelete($event)"
+    ></app-product-dashboard>
   </div>
 </div>

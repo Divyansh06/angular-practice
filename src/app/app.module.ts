@@ -6,6 +6,7 @@ import { ContainerComponent } from './container/container.component';
 import { ProductDashboardComponent } from './container/product-dashboard/product-dashboard.component';
 import { ProductComponent } from './container/product-dashboard/product/product.component';
 import { ProductFormComponent } from './container/product-form/product-form.component';
+import { AlertsComponent } from './container/alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ProductFormComponent } from './container/product-form/product-form.comp
     ProductDashboardComponent,
     ProductComponent,
     ProductFormComponent,
+    AlertsComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

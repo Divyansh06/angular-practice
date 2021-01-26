@@ -7,6 +7,7 @@
       class="form-control"
       id="productname"
       placeholder="Product Name"
+      required="required"
       [value]="name"
       (input)="handleNameChange($event)"
     />
@@ -18,6 +19,7 @@
       id="productdescription"
       rows="3"
       placeholder="Product Description"
+      required="required"
       [value]="description"
       (input)="handleDesChange($event)"
     ></textarea>

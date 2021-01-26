@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-form',
@@ -9,6 +9,12 @@ export class ProductFormComponent implements OnInit {
   name: String = '';
   description: String = '';
   image: String = '';
+
+  @Output() onProductCreate = new EventEmitter<{
+    name: String;
+    description: String;
+    image: String;
+  }>();
 
   ngOnInit(): void {}
 
@@ -25,7 +31,12 @@ export class ProductFormComponent implements OnInit {
   }
 
   handleSubmit() {
-    console.log(this.name, this.description, this.image);
+    const { name, description, image } = this;
+    this.onProductCreate.emit({
+      name,
+      description,
+      image,
+    });
     this.name = '';
     this.description = '';
     this.image = '';

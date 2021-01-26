@@ -1,0 +1,10 @@
+<div *ngIf="alertlist.length > 0">
+  <div
+    style="margin: 10px"
+    role="alert"
+    *ngFor="let alert of alertlist"
+    class="alert alert-{{ alert.type }}"
+  >
+    {{ alert.message }}
+  </div>
+</div>
